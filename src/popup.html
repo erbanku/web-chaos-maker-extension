@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Visual Controller</h1>
+            <p class="subtitle">Professional Page Modifier</p>
+        </div>
+
+        <!-- Display Tab -->
+        <div id="display" class="tab-content active">
+            <div class="section">
+                <h2>Background</h2>
+                <div class="control-group">
+                    <input type="color" id="colorPicker" value="#ffffff">
+                    <button id="applyColor" class="btn btn-primary">Apply Color</button>
+                    <button id="resetColor" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Filters</h2>
+                <div class="slider-group">
+                    <label>Brightness: <span id="brightnessValue">100</span>%</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </div>
+                <div class="slider-group">
+                    <label>Contrast: <span id="contrastValue">100</span>%</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </div>
+                <div class="slider-group">
+                    <label>Sepia: <span id="sepiaValue">0</span>%</label>
+                    <input type="range" id="sepia" min="0" max="100" value="0">
+                </div>
+                <div class="slider-group">
+                    <label>Blur: <span id="blurValue">0</span>px</label>
+                    <input type="range" id="blur" min="0" max="20" value="0">
+                </div>
+
+                <div class="toggle-group">
+                    <button id="toggleGrayscale" class="btn btn-toggle">Grayscale</button>
+                    <button id="toggleInvert" class="btn btn-toggle">Invert Colors</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transform Tab -->
+        <div id="transform" class="tab-content">
+            <div class="section">
+                <h2>Rotation</h2>
+                <div class="slider-group">
+                    <label>Angle: <span id="rotation2dValue">0</span>°</label>
+                    <input type="range" id="rotation2d" min="0" max="360" value="0">
+                </div>
+                <div class="button-grid">
+                    <button id="rotate0" class="btn btn-outline">0°</button>
+                    <button id="rotate90" class="btn btn-outline">90°</button>
+                    <button id="rotate180" class="btn btn-outline">180°</button>
+                    <button id="rotate270" class="btn btn-outline">270°</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Orientation</h2>
+                <div class="button-grid">
+                    <button id="mirrorMode" class="btn btn-outline">Horizontal Flip</button>
+                    <button id="upsideDown" class="btn btn-outline">Vertical Flip</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Zoom</h2>
+                <div class="slider-group">
+                    <label>Scale: <span id="zoomValue">100</span>%</label>
+                    <input type="range" id="zoom" min="50" max="200" value="100">
+                </div>
+            </div>
+        </div>
+
+        <!-- Effects Tab -->
+        <div id="effects" class="tab-content">
+            <div class="section">
+                <h2>Dynamic</h2>
+                <div class="button-grid">
+                    <button id="rainbowMode" class="btn btn-effect">Color Cycle</button>
+                    <button id="discoMode" class="btn btn-effect">Strobe</button>
+                    <button id="spinMode" class="btn btn-effect">Auto Spin</button>
+                    <button id="wobbleMode" class="btn btn-effect">Wobble</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Overlay</h2>
+                <div class="button-grid">
+                    <button id="matrixMode" class="btn btn-effect">Digital Rain</button>
+                    <button id="confettiMode" class="btn btn-effect">Celebration</button>
+                    <button id="glitchMode" class="btn btn-effect">Signal Noise</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Motion</h2>
+                <div class="button-grid">
+                    <button id="bounceMode" class="btn btn-effect">Bounce</button>
+                    <button id="shakeMode" class="btn btn-effect">Vibrate</button>
+                    <button id="crazyZoom" class="btn btn-effect">Pulse Zoom</button>
+                    <button id="flipMode" class="btn btn-effect">3D Flip</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <button id="comboMode" class="btn btn-primary">Run All Diagnostics</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button id="resetAll" class="btn btn-danger">Reset All Settings</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
