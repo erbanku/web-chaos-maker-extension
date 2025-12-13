@@ -34,12 +34,6 @@ A hilarious Chrome extension that turns any boring webpage into a PARTY! Change 
 ### 💥 ULTIMATE CHAOS
 The combo button that does EVERYTHING AT ONCE! Rotation, scaling, color changes, confetti... pure madness!
 
-### ⌨️ Keyboard Shortcuts
-- **Ctrl+Shift+1** - Rotate 90°
-- **Ctrl+Shift+2** - Rotate 180°
-- **Ctrl+Shift+3** - Rotate 270°
-- **Ctrl+Shift+0** - Reset all effects
-
 ### 💾 Persistent Settings
 - Settings are automatically saved per website domain
 - Your background color and rotation persist across:
@@ -59,9 +53,9 @@ The combo button that does EVERYTHING AT ONCE! Rotation, scaling, color changes,
 5. Select the `src` folder inside `background-changer-extension`
 6. The extension icon should now appear in your Chrome toolbar
 
-### Method 2: Chrome Web Store (If Published)
+### Method 2: Chrome Web Store
 
-_This extension is currently not published on the Chrome Web Store._
+_This extension is currently not published on the Chrome Web Store yet._
 
 ## Usage
 
@@ -73,7 +67,6 @@ _This extension is currently not published on the Chrome Web Store._
 - **Color Picker** - Select a color and click "Apply Color" - it saves automatically!
 - **Rotation Presets** - Quick buttons for 90°, 180°, 270° rotation
 - **Custom Rotation** - Use the slider for any angle you want
-- **Keyboard Shortcuts** - Press Ctrl+Shift+1/2/3 for quick rotations!
 
 ### Settings Persistence
 - Your settings are **automatically saved per website**
@@ -104,8 +97,6 @@ This extension is extremely fun and may cause:
 - An urge to prank everyone
 - Complaints from people trying to read
 
-Use responsibly (or don't, we're not your boss)!
-
 ## 🎯 Best Places to Use
 
 - Boring meetings (share your screen with chaos enabled)
@@ -118,7 +109,7 @@ Use responsibly (or don't, we're not your boss)!
 ## File Structure
 
 ```
-background-changer-extension/
+src/
 ├── manifest.json          # Extension configuration
 ├── popup.html            # Extension popup interface
 ├── popup.css             # Popup styling
@@ -129,28 +120,7 @@ background-changer-extension/
 │   ├── icon32.png
 │   ├── icon48.png
 │   └── icon128.png
-├── generate_icons.py     # Script to generate icons
-└── README.md            # This file
-```
-
-## Technical Details
-
-- **Manifest Version**: 3 (latest Chrome extension standard)
-- **Permissions**: `activeTab`, `storage`
-- **Content Scripts**: Injected into all URLs to enable transformations
-- **Browser Compatibility**: Chrome, Edge, and other Chromium-based browsers
-
-## Development
-
-### Prerequisites
-- Google Chrome or Chromium-based browser
-- Python 3.x (if regenerating icons)
-- PIL/Pillow library (for icon generation)
-
-### Regenerating Icons
-```bash
-pip install pillow
-python generate_icons.py
+└── README.md
 ```
 
 ## Notes
@@ -170,6 +140,8 @@ python generate_icons.py
 5. Rainbow mode on a spreadsheet = instant productivity boost (results not scientifically verified)
 
 ## License
+
+MIT License
 
 This project is open source and available for causing harmless chaos everywhere.
 
