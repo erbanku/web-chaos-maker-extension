@@ -4,6 +4,9 @@ Just for fun 😂
 
 A hilarious Chrome extension that turns any boring webpage into a PARTY! Change backgrounds, spin things around, and unleash total visual chaos!
 
+Chrome Web Store:
+https://chromewebstore.google.com/detail/web-chaos-maker-%F0%9F%8E%A8/igidggepifmnnhlimhglmemllodhmdep
+
 ## ✨ Features
 
 ### 🎨 Background Mayhem
