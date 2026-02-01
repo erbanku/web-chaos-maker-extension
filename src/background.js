@@ -29,8 +29,14 @@ chrome.commands.onCommand.addListener(async (command) => {
     }
 
     if (action) {
-        // Send message to content script
-        chrome.tabs.sendMessage(tab.id, { action, ...data });
+        // Send message to content script with error handling
+        try {
+            await chrome.tabs.sendMessage(tab.id, { action, ...data });
+        } catch (error) {
+            // Silently handle errors for special pages where content scripts can't run
+            console.log('Content script not available on this page:', error.message);
+            return;
+        }
 
         // Save the setting
         const settings = {

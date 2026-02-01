@@ -62,7 +62,16 @@ async function sendMessage(action, data = {}) {
         active: true,
         currentWindow: true,
     });
-    chrome.tabs.sendMessage(tab.id, { action, ...data });
+
+    // Check if we can send messages to this tab
+    try {
+        await chrome.tabs.sendMessage(tab.id, { action, ...data });
+    } catch (error) {
+        // Silently handle errors for special pages (PDFs, Chrome pages, etc.)
+        // where content scripts can't run
+        console.log('Content script not available on this page:', error.message);
+        return;
+    }
 
     // Save settings for this domain (except for temporary fun modes)
     const persistentActions = [
@@ -212,7 +221,13 @@ async function sendTemporaryMessage(action, data = {}) {
         active: true,
         currentWindow: true,
     });
-    chrome.tabs.sendMessage(tab.id, { action, ...data });
+
+    try {
+        await chrome.tabs.sendMessage(tab.id, { action, ...data });
+    } catch (error) {
+        // Silently handle errors for special pages where content scripts can't run
+        console.log('Content script not available on this page:', error.message);
+    }
 }
 
 rainbowBtn.addEventListener("click", () => sendTemporaryMessage("rainbowMode"));
