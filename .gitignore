@@ -2,4 +2,5 @@
 misc/
 src.crx
 src.pem
-src 2026-02-01 13-28-05.zip
+dist/
+*.zip
